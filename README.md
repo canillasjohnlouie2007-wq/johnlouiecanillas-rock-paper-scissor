@@ -1,2 +1,2 @@
-# rock-paper-scissor-project_Canillas_John_Louie
+#johnlouiecanillas-rock-paper-scissor
 About a game with bots
