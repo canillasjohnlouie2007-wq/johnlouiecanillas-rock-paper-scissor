@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Rock Paper Scissors</title>
-    <script src="loyloy.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <style>
+ <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2em;      
+    text-align: center;   
+  }
+
+  button {
+    font-size: 1em;     
+    margin: 0.5em;
+    padding: 0.5em 1em;
+  }
+</style>
 </head>
 <body>
 
-    <h1>Rock Paper Scissors</h1>
+<h1>Bato Bato pick</h1>
 
-    <div class="selections">
-        <button class="selection">✊</button>
-        <button class="selection">✋</button>
-        <button class="selection">✌️</button>
-   </div>
-   <div class="result"s>
-    <div>You
-        <span class="result-score">0</span>
-    </div>
-     <div>
-        Computer
-        <span class="result-score">0</span>
-    </div>
-   </div>
+<div id="buttons-container">
+  <button id="rock">✊ Rock</button>
+  <button id="paper">✋ Paper</button>
+  <button id="scissors">✌️ Scissors</button>
+</div>
+
+<p id="result">Make your move!</p>
+<p id="score">You: 0 | Computer: 0</p>
+
+<!-- Link to external JS file -->
+<script src="loyloy.js" defer></script>
 </body>
 </html>
