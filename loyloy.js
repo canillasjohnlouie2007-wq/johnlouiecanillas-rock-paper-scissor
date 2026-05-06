@@ -35,6 +35,15 @@ function play(userChoice) {
     compScore++;
   }
 
+  resultDiv.classList.remove('status-win', 'status-lose', 'status-tie');
+  if (outcome === 'You win!') {
+    resultDiv.classList.add('status-win');
+  } else if (outcome === 'You lose!') {
+    resultDiv.classList.add('status-lose');
+  } else {
+    resultDiv.classList.add('status-tie');
+  }
+
   resultDiv.innerHTML = `
     You chose: ${userChoice} <br>
     Computer chose: ${compChoice} <br>

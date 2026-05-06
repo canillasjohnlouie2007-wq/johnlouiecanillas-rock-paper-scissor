@@ -3,39 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scissors</title>
-  <style>
- <style>
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 2em;      
-    text-align: center;   
-  }
-
-  button {
-    font-size: 1em;     
-    margin: 0.5em;
-    padding: 0.5em 1em;
-  }
-</style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main class="game-shell">
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <p class="intro">Choose your move and see if you can beat the computer.</p>
+    </header>
 
-<h1>Bato Bato pick</h1>
+    <div id="buttons-container">
+      <button id="rock">✊ Rock</button>
+      <button id="paper">✋ Paper</button>
+      <button id="scissors">✌️ Scissors</button>
+    </div>
 
-<div id="buttons-container">
-  <button id="rock">✊ Rock</button>
-  <button id="paper">✋ Paper</button>
-  <button id="scissors">✌️ Scissors</button>
-</div>
+    <section id="result">Make your move!</section>
+    <section id="score">You: 0 | Computer: 0</section>
 
-<p id="result">Make your move!</p>
-<p id="score">You: 0 | Computer: 0</p>
+    <p class="footer">Tap a button to play again.</p>
+  </main>
 
-<!-- Link to external JS file -->
-<script src="loyloy.js" defer></script>
+  <script src="loyloy.js" defer></script>
 </body>
 </html>

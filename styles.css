@@ -1,0 +1,131 @@
+:root {   
+  --bg: radial-gradient(circle at top left, rgba(69, 133, 242, 0.9), transparent 28%),
+         radial-gradient(circle at bottom right, rgba(174, 85, 255, 0.8), transparent 24%),
+         linear-gradient(135deg, #101820 0%, #1d2752 52%, #0f1537 100%);
+  --card: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.16);
+  --text: #f6f8ff;
+  --muted: #b3b8ea;
+  --accent: #a8d5ff;
+  --win: #8de2a1;
+  --lose: #ff8a8a;
+  --tie: #ffe58a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-image: linear-gradient(rgba(15, 22, 55, 0.75), rgba(15, 22, 55, 0.85)),
+                    url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.game-shell {
+  width: min(640px, 100%);
+  padding: 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 32px;
+  background: var(--card);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.18em;
+  font-size: clamp(2rem, 3vw, 3rem);
+  text-transform: uppercase;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.intro {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-2px);
+  border-color: rgba(168, 213, 255, 0.55);
+  background: rgba(255, 255, 255, 0.11);
+  outline: none;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#result,
+#score {
+  margin: 0.75rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.6;
+}
+
+#result strong {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.status-win {
+  color: var(--win);
+}
+
+.status-lose {
+  color: var(--lose);
+}
+
+.status-tie {
+  color: var(--tie);
+}
+
+.footer {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+  #buttons-container {
+    grid-template-columns: 1fr;
+  }
+}
